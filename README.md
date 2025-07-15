@@ -3,7 +3,7 @@
 #### Description: A monthly expense tracker!
 
 Introduction:
-Monthly Munyun is a web application built using Flask, HTML/CSS, and SQL that is meant to provide users a platform to keep track of there monthly expenses.
+Monthly Munyun is a web application built using Flask, HTML/CSS, and SQL that is meant to provide users a platform to keep track of there monthly expenses. This project is deployed using GitHub pages. Users will be asked to create an account before being able to have access.
 
 File Overview:
 app.py - This file contains all the backend logic written in Flask including user authentication, route logic, and session management.
