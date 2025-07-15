@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Budget
+{% endblock %}
+
+{% block main %}
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for msg in messages %}
+            <div class="alert alert-danger text-center"> {{msg}} </div>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+<div class="container d-flex flex-column justify-content-center align-items-center text-center mx-auto w-50 bg-dark p-5 rounded-3">
+    <h3 class="text-light">Budget</h3>
+    <form action="/budget" method="post">
+    <div class="form-group mb-3">
+        <label for="income">Income:</label>
+        <input class="form-control mx-auto w-auto" type="text" name="income" placeholder="Enter your income"/>
+    </div>
+
+    <div class="form-group mb-3 p-3">
+        <h3 class="text-light">1. Needs</h3>
+        <label for="housing">Rent or Mortgage:</label>
+        <input class="form-control mx-auto w-auto" type="text" name="housing" placeholder="$$$"/>
+
+        <label for="car">Car Payments:</label>
+        <input class="form-control mx-auto w-auto" type="text" name="car" placeholder="$$$"/>
+
+        <label for="car-insurance">Car Insurance:</label>
+        <input class="form-control mx-auto w-auto" type="text" name="car-insurance" placeholder="$$$"/>
+
+        <label for="transportation">Transportation:</label>
+        <input class="form-control mx-auto w-auto" type="text" name="transportation" placeholder="$$$"/>
+
+        <label for="groceries">Groceries:</label>
+        <input class="form-control mx-auto w-auto" type="text" name="groceries" placeholder="$$$"/>
+    </div>
+
+    <div class="form-group mb-3 p-3">
+        <h3 class="text-light">2. Wants</h3>
+
+        <label for="entertainment">Entertainment:</label>
+        <input class="form-control mx-auto w-auto" type="text" name="entertainment" placeholder="$$$"/>
+
+        <label for="shopping">Shopping:</label>
+        <input class="form-control mx-auto w-auto" type="text" name="shopping" placeholder="$$$"/>
+
+        <label for="other">Other:</label>
+        <input class="form-control mx-auto w-auto" type="text" name="other" placeholder="$$$"/>
+    </div>
+
+    <div class="form-group mb-3 p-3">
+        <h3 class="text-light">3. Savings/Debt</h3>
+
+        <label for="debt">Debt:</label>
+        <input class="form-control mx-auto w-auto" type="text" name="debt" placeholder="$$$"/>
+
+        <label for="savings">401k Contribution:</label>
+        <input class="form-control mx-auto w-auto" type="text" name="savings" placeholder="$$$"/>
+
+        <label for="saving-other">Other:</label>
+        <input class="form-control mx-auto w-auto" type="text" name="saving-other" placeholder="$$$"/>
+    </div>
+
+    <button type="submit">Submit</button>
+    </form>
+</div>
+{% endblock %}
