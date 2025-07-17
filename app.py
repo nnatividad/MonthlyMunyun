@@ -262,7 +262,7 @@ def register():
 @login_required
 def logout():
     session.clear() #logs out the current user
-    return render_template("login.html")
+    return redirect("/login")
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", debug=True)
